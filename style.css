@@ -1,0 +1,239 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background: #ffffff;
+  color: #111;
+}
+
+/* Header    */
+.site-header img {
+  width: 150px;
+}
+
+/* Hero */
+.banner {
+  height: 65vh;
+  background: linear-gradient(
+      rgba(0, 0, 0, 0.7),
+      rgba(0, 0, 0, 0.7)
+    ),
+    url("./image/heroBg.jpg") center/cover no-repeat;
+}
+
+.banner-content {
+  max-width: 720px;
+  padding: 20px;
+}
+
+.banner-title {
+  font-size: 56px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 16px;
+}
+
+.banner-subtitle {
+  font-size: 18px;
+  color: #e0e0e0;
+  line-height: 1.6;
+}
+
+/* Section   */
+.recipe-area h2 {
+  font-size: 38px;
+  font-weight: 600;
+}
+
+/* Search    */
+.search-input span {
+  cursor: pointer;
+  color: hsl(59, 91%, 49%);
+}
+
+.search-input span:hover {
+  color: #0dda40;
+}
+
+/* Cards */
+.card {
+  border: none;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+}
+
+/* Modal */
+/* .view {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.3s;
+  z-index: 999;
+}
+
+.view-container {
+  width: 95%;
+  max-width: 520px;
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+} */
+
+
+
+.view {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: .3s;
+  z-index: 9999;
+}
+
+/* Modal size */
+.view-container {
+  width: 90%;
+  max-width: 600px;
+}
+
+/* Card */
+.view .card {
+  max-height: 85vh;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+/* Image */
+.view img {
+  height: 220px;
+  object-fit: cover;
+}
+
+/* Scrollable text */
+.view .card-body p {
+  max-height: 220px;
+  overflow-y: auto;
+}
+
+/* CLOSE BUTTON FIX */
+.close-btn {
+  position: absolute;
+ bottom: 10px;
+ right: 10px;
+  z-index: 20;
+  border-radius: 10%;
+  padding: 5px 5px;
+  color: #070707;
+}
+
+
+
+
+
+/* Scroll Button   */
+.window-scroll {
+  position: fixed;
+  right: 30px;
+  bottom: 80px;
+  width: 48px;
+  height: 48px;
+  background:#ffc107;
+  color: #f8f8f8;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.3s;
+  z-index: 9999;
+  
+}
+
+.window-scroll.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+.window-scroll:hover {
+  background-color: #0dda40;
+  color: #fff;
+  transform: scale(1.1);
+}
+
+/* Footer */
+.footer-area {
+  background: #111;
+}
+
+.footer-area a {
+  color: #fff;
+  margin: 0 10px;
+  font-size: 18px;
+}
+
+.footer-area a:hover {
+  color: #0dda40;
+}
+
+
+    /* MOBILE */
+@media (max-width: 576px) {
+  .banner {
+    min-height: 65vh;
+  }
+
+  .banner-content {
+    text-align: center;
+  }
+
+  .banner-title {
+    font-size: 32px;
+  }
+
+  .banner-subtitle {
+    font-size: 16px;
+  }
+
+  .recipe-area h2 {
+    font-size: 26px;
+  }
+
+  .view img {
+    height: 180px;
+  }
+}
+
+/*    TABLET  */
+@media (min-width: 577px) and (max-width: 1024px) {
+  .banner-title {
+    font-size: 44px;
+  }
+
+  .recipe-area h2 {
+    font-size: 32px;
+  }
+
+  .view-container {
+    max-width: 550px;
+  }
+}
